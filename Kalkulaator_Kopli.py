@@ -20,13 +20,15 @@ class cal():
         return self.a ** self.b
     def siinus(self): #Siinus funktsioon, mis arvutab a-sisendi siinusväärtuse
         return math.sin(math.radians(self.a))
+    def koosinus(self): #Koosinus funktsioon, mis arvutab a-sisendi koosinusväärtuse
+        return math.cos(math.radians(self.a))
 a = int(input("Sisesta esimene number: "))
 b = int(input("Sisesta teine number: "))
 
 kalk = cal(a,b)
 while True:
     def menu():
-        x = ('1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine\n5. Jäägi leidmine\n6. Ruutjuure leidmine. ')
+        x = ('1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine\n5. Jäägi leidmine\n6. Ruutjuure leidmine\n7. Siinuse leidmine\n8. Koosinuse leidmine ')
         print(x)
     menu()
     valik = int(input('Sisesta üks valikutest: '))
@@ -51,8 +53,11 @@ while True:
     elif valik == 7:
         print("Vastus: ",kalk.siinus()) # Siinuse valiku kuvamine
         break
+    elif valik == 8:
+        print("Vastus: ",kalk.koosinus()) #Koosinuse valiku kuvamine
+        break
     elif valik == 0:
         print('Sisesta uuesti üks liitmise operaator')
         break
 
-#14:59Today
+#15:06 Today
