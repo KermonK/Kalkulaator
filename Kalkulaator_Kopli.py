@@ -26,7 +26,7 @@ num1 = int(input("Sisesta esimene number: ")) # antud käsku kasutatakse selleks
 num2 = int(input("Sisesta teine number: ")) # antud käsku kasutatakse selleks, et saada kasutajalt sisend ja muuta see täis arvuks.
 
 kalk = Cal(num1,num2)
-while True: #
+while True: #tähendab lõpmatut tsüklit. While käivitub siis kui tingimus on tõene ning True kui on alati tõene. Niikaua loopib kuni katkestatakse käsuga break
     def menu():
         x = '1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine\n5. Jäägi leidmine\n6. Ruutjuure leidmine\n7. Siinuse leidmine\n8. Koosinuse leidmine '
         print(x)
@@ -59,4 +59,4 @@ while True: #
     else:
         print('Sisestatud number ei ole kasutusel. Palun proovige uuesti.')
 
-#15:30 Today
+#18:44 Today
