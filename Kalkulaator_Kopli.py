@@ -1,3 +1,6 @@
+import math
+
+
 class cal():
     def __init__(self,a,b):
         self.a = a
@@ -15,6 +18,8 @@ class cal():
         return self.a % self.b
     def ruutjuur(self):
         return self.a ** self.b
+    def siinus(self): #Siinus funktsioon, mis arvutab a-sisendi siinusväärtuse
+        return math.sin(math.radians(self.a))
 a = int(input("Sisesta esimene number: "))
 b = int(input("Sisesta teine number: "))
 
@@ -43,6 +48,11 @@ while True:
     elif valik == 6:
         print("Vastus: ",kalk.ruutjuur())
         break
+    elif valik == 7:
+        print("Vastus: ",kalk.siinus()) # Siinuse valiku kuvamine
+        break
     elif valik == 0:
         print('Sisesta uuesti üks liitmise operaator')
         break
+
+#14:59Today
