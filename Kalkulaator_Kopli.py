@@ -59,4 +59,4 @@ while True: #
     else:
         print('Sisestatud number ei ole kasutusel. Palun proovige uuesti.')
 
-#15:28 Today
+#15:30 Today
