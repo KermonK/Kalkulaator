@@ -1,32 +1,34 @@
-import math
+import math #Imporditakse kõik funktsioonid mis seonudvad matemaatikaga.
 
 
-class cal():
-    def __init__(self,a,b):
-        self.a = a
-        self.b = b
+class Cal: #Templiit millegi tegevuseks nagu näiteks "objekt" kalkulaator.
+    def __init__(self, num1, num2): # def kasutatakse funktsiooni määramiseks ning __init__ on eriline meetodi nimi mis on automaatselt lisatud kui luuakse uus objekt. Self viitab objektile.
+        self.num1 = num1 #
+        self.num2 = num2
 
     def liitmine(self):
-        return self.a + self.b
+        return self.num1 + self.num2 #see lõpetab funktsiooni töö ja viib väärtuse välja, mis saab olema funktsiooni tulemus.
     def lahutamine(self):
-        return self.a - self.b
+        return self.num1 - self.num2
     def korrutamine(self):
-        return self.a * self.b
+        return self.num1 * self.num2
     def jagamine(self):
-        return self.a / self.b
+        return self.num1 / self.num2
     def jaak(self):
-        return self.a % self.b
+        return self.num1 % self.num2
     def ruutjuur(self):
-        return self.a ** self.b
+        return self.num1 ** self.num2
     def siinus(self): #Siinus funktsioon, mis arvutab a-sisendi siinusväärtuse
-        return math.sin(math.radians(self.a))
-a = int(input("Sisesta esimene number: "))
-b = int(input("Sisesta teine number: "))
+        return math.sin(math.radians(self.num1))
+    def koosinus(self): #Koosinus funktsioon, mis arvutab a-sisendi koosinusväärtuse
+        return math.cos(math.radians(self.num1))
+num1 = int(input("Sisesta esimene number: ")) # antud käsku kasutatakse selleks, et saada kasutajalt sisend ja muuta see täis arvuks.
+num2 = int(input("Sisesta teine number: ")) # antud käsku kasutatakse selleks, et saada kasutajalt sisend ja muuta see täis arvuks.
 
-kalk = cal(a,b)
-while True:
+kalk = Cal(num1,num2)
+while True: #
     def menu():
-        x = ('1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine\n5. Jäägi leidmine\n6. Ruutjuure leidmine. ')
+        x = '1. Liitmine \n2. lahutamine\n3. korrutamine\n4. jagamine\n5. Jäägi leidmine\n6. Ruutjuure leidmine\n7. Siinuse leidmine\n8. Koosinuse leidmine '
         print(x)
     menu()
     valik = int(input('Sisesta üks valikutest: '))
@@ -51,8 +53,10 @@ while True:
     elif valik == 7:
         print("Vastus: ",kalk.siinus()) # Siinuse valiku kuvamine
         break
-    elif valik == 0:
-        print('Sisesta uuesti üks liitmise operaator')
+    elif valik == 8:
+        print("Vastus: ",kalk.koosinus()) #Koosinuse valiku kuvamine
         break
+    else:
+        print('Sisestatud number ei ole kasutusel. Palun proovige uuesti.')
 
-#14:59Today
+#15:28 Today
