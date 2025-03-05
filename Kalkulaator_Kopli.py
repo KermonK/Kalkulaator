@@ -59,4 +59,4 @@ while True: #tähendab lõpmatut tsüklit. While käivitub siis kui tingimus on 
     else:
         print('Sisestatud number ei ole kasutusel. Palun proovige uuesti.')
 
-#18:44 Today
+#10.25: today
